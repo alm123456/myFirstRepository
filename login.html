@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+
+<meta charset="utf-8">
+<title>大学生家教平台登录</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- CSS -->
+
+<link rel="stylesheet" href="css/supersized.css">
+<link rel="stylesheet" href="css/login.css">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+	<script src="js/html5.js"></script>
+<![endif]-->
+<script src="js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="js/jquery.form.js"></script>
+<script type="text/javascript" src="js/tooltips.js"></script>
+</head>
+
+<body>
+
+<div class="page-container">
+	<div class="main_box">
+		<div class="login_box">
+			<div class="login_logo">
+				<img src="images/logo.jpg" >
+			</div>
+		
+			<div class="login_form">
+				<form action="index.html" id="login_form" method="post">
+					<div class="form-group">
+						<label for="j_username" class="t">账  号：</label> 
+						<input id="account" value="" name="account" type="text" class="form-control x319 in" 
+						autocomplete="off">
+					</div>
+					<div class="form-group">
+						<label for="j_password" class="t">密  码：</label> 
+						<input id="password" value="" name="password" type="password" 
+						class="password form-control x319 in">
+					</div>
+					<div class="form-group">
+						<label for="j_captcha" class="t">验证码：</label>
+						 <input id="j_captcha" name="j_captcha" type="text" class="form-control x164 in">
+						<img id="captcha_img" alt="点击更换" title="点击更换" src="images/captcha.jpeg" class="m">
+					</div>
+					<div class="form-group">
+						<label class="t"></label>
+						<label for="j_remember" class="m">
+						<input id="j_remember" type="checkbox" value="true">&nbsp;记住登陆账号!</label>
+					</div>
+					<div class="form-group space">
+						<label class="t"></label>
+						<button type="button"  id="submit_btn" 
+						class="btn btn-primary btn-lg" onclick="isLogin()">&nbsp;登&nbsp;录&nbsp </button>
+						<input type="reset" value="&nbsp;重&nbsp;置&nbsp;" class="btn btn-default btn-lg">
+                        <button type="button"  id="submit_btn2" 
+						class="btn btn-primary btn-lg">&nbsp;注&nbsp;册&nbsp </button>
+					</div>
+                    
+				</form>
+			</div>
+		</div>
+		<div class="bottom">Copyright &copy; 2018 - 2019 <a href="#">平台登陆</a></div>
+	</div>
+</div>
+
+<!-- Javascript -->
+
+<script src="js/supersized.3.2.7.min.js"></script>
+<script src="js/supersized-init.js"></script>
+<script src="js/scripts.js"></script>
+
+</body>
+<script>
+    function isLogin(){
+        var url = "";
+        var account = $("#account").val();
+        var password = $("#password").val();
+        $.ajaxSettings.xhrFields = {
+            withCredentials : true
+        };
+        console.log("进入了isLogin（）函数");
+        $.ajax({											//传参
+            crossDomain:true,
+            url:url,
+            data:{
+                "account":account,
+                "password":password
+            },
+            type:"post",
+            dataType:"json",
+            success:function (data) {					//成功回调函数
+                console.log(data);
+                console.log(data.account);
+                /*这里要加载一个已经登录了的主页*/
+                if (data.status == 200) {
+                    // console.log(data.token);             //后台返回数据显示
+                    //alert("in 200's data.uName:" + data.uName);
+                    //返回success则登录成功，跳转到index页面并带着一个学号的值，跳到index把学号传给后台，获取当前学号的数据。
+                    if (data.message == "success") {
+                        console.log("账号密码是否成功的if的data.uName", data.account);
+                        //$.cookie("uName","data.uName");				//保存用户登录的用户名，到menu.html上拿来加载相对应用户首页用
+                        alert("登录成功！");
+                        //window.location.href传递学号
+                        var indexUser = data.account;
+                        //var urlUser = "index.html?indexUser=" + indexUser +"";
+                        window.location.href = "index.html?indexUser=" + indexUser +"";
+                    }
+                    else {
+                        alert("账号或密码错误，请重试");
+                    }
+                }
+                else {
+                    alert("网页跑丢啦！");
+                }
+            },
+            fail:function(data){
+                console.log("fail");
+                console.log(data.message);
+            },
+            error:function (data) {
+                console.log("error");
+                console.log(data.message);
+            }
+        });
+        //}
+    }
+	
+	$(function(){
+			$('#submit_btn2').click(function(){
+				show_msg('跳转注册页面');
+				window.location.href="zhuce.html";
+				});
+			});
+</script>
+</html>
