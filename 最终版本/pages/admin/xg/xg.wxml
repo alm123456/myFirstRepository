@@ -1,0 +1,29 @@
+<!--pages/admin/xg/xg.wxml-->
+<view class="c2">
+修改页面
+</view>
+    <view class='item'>
+      <text >姓名：</text><input bindinput="nameInput" value='{{name}}'></input>
+    </view>
+    <view class='item'>
+      <text >性别：</text><input bindinput="sexInput" value='{{sex}}'></input>
+    </view>
+    <view class='item'>
+     <text> 年龄：</text><input bindinput="ageInput" value='{{age}}'></input>
+    </view>
+    <view class='item'>
+      <text >邮箱：</text><input bindinput="emailInput" value='{{email}}'></input>
+    </view>
+    <view class='item'>
+      <text >地址：</text><input bindinput="addressInput" value='{{address}}'></input>
+    </view>
+  
+    <view  >
+     <textarea style="font-size:13px;height:60px;"></textarea>
+    </view>
+    <view class="y1">
+          <view style="margin-left: 23%;"><button class='btn5' bindtap="goTochange">修改</button></view>
+          <view style="margin-left:30%;"><button class="btn6" bindtap="goTO1">退出</button></view>
+          </view>
+
+

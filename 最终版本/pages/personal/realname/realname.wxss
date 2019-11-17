@@ -1,0 +1,18 @@
+/* pages/realname/realname.wxss */
+.section
+{
+  display: flex;
+  flex-direction: row;
+  margin: 20rpx;
+}
+
+.view_a{
+  text-align: center;
+
+}
+
+
+.btn{
+
+  margin: 10rpx ;
+}

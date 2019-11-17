@@ -1,0 +1,96 @@
+<!--pages/order/order.wxml-->
+<!-- 切换栏 -->
+<view class="swiper-tab">
+  <block wx:for="{{swipertab}}" wx:key="sptab">
+    <view class="swiper-tab-list {{currtab == item.index ? 'on' : ''}}" data-current="{{item.index}}" bindtap="tabSwitch">{{item.name}}</view>
+  </block>
+</view>
+ 
+<swiper current="{{currtab}}" class="swiper-box" duration="300" style="height:{{deviceH+50}}px" bindchange="tabChange">
+
+
+  <!-- 完成 -->
+  <swiper-item>
+    <scroll-view  scroll-y="true">
+      <view  class="orderDetails" wx:for="{{text}}" wx:key=" ">
+        <view class="orderListTitle">
+          <text class="userName">{{item.title}}</text>
+          
+        </view>
+        <view class="orderListDetails">
+
+          <view class="productInfo">
+            <view class="productTitle">订单号: {{item.id}}</view>
+            <view class="productTitle">发布人：{{item.account1}}</view>
+            <view class="productTitle">接单人：{{item.account2}}</view>
+            <view class="productTitle">科目: {{item.subject}}</view>
+            <view class="productTitle">年级: {{item.grade_name}}{{item.level}}</view>
+            <view class="productTitle">薪酬: {{item.money}}</view>
+            <view class="productTitle">时间: {{item.time}}</view>
+            <view class="productTitle">地点: {{item.address}}</view>
+            
+          </view>
+
+        </view>
+        <view class="v2">
+          <view  style="margin-left: 5px;"><button class="btn2"  bindtap="goToOK" data-value="{{item.id}}">完成订单</button></view>
+          <view><button class="btn1" bindtap="goToDE" data-value="{{item.id}}">取消订单</button></view>
+          </view>
+      </view>
+    </scroll-view>
+  </swiper-item>
+   <swiper-item>
+    <scroll-view  scroll-y="true">
+      <view  class="orderDetails" wx:for="{{text2}}" wx:key=" ">
+        <view class="orderListTitle">
+          <text class="userName">{{item.title}}</text>
+          
+        </view>
+        <view class="orderListDetails">
+
+          <view class="productInfo">
+            <view class="productTitle">订单号: {{item.id}}</view>
+            <view class="productTitle">发布人：{{item.account1}}</view>
+            <view class="productTitle">接单人：{{item.account2}}</view>
+            <view class="productTitle">科目: {{item.subject}}</view>
+            <view class="productTitle">年级: {{item.grade_name}}{{item.level}}</view>
+            <view class="productTitle">薪酬: {{item.money}}</view>
+            <view class="productTitle">时间: {{item.time}}</view>
+            <view class="productTitle">地点: {{item.address}}</view>
+            
+          </view>
+
+        </view>
+        <view class="v2">
+          
+          <view><button class="btn1" bindtap="goToDE" data-value="{{item.id}}">取消订单</button></view>
+          </view>
+      </view>
+    </scroll-view>
+  </swiper-item>
+  <swiper-item>
+    <scroll-view  scroll-y="true">
+      <view class="orderDetails" wx:for="{{text3}}" wx:key=" ">
+        <view class="orderListTitle">
+           <text class="userName">{{item.title}}</text>
+          
+        </view>
+        <view class="orderListDetails">
+          <view class="productInfo">
+            <view class="productTitle">订单号: {{item.id}}</view>
+            <view class="productTitle">发布人：{{item.account1}}</view>
+            <view class="productTitle">接单人：{{item.account2}}</view>
+            <view class="productTitle">科目: {{item.subject}}</view>
+            <view class="productTitle">年级: {{item.grade_name}}{{item.level}}</view>
+            <view class="productTitle">薪酬: {{item.money}}</view>
+            <view class="productTitle">时间: {{item.time}}</view>
+            <view class="productTitle">地点: {{item.address}}</view>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </swiper-item>
+
+  
+ 
+</swiper>

@@ -1,0 +1,29 @@
+/* pages/admin/xg/xg.wxss */
+
+.item{
+  height: 70rpx;
+  background-color: #ebf5fc;
+  margin: 10rpx 30rpx 6rpx 30rpx;
+  display: flex;
+  border-radius: 10rpx;
+}
+
+
+.item1{
+  height: 100rpx;
+  background-color: #ebf5fc;
+  margin: 0rpx 30rpx 6rpx 30rpx;
+  display: flex;
+  border-radius: 10rpx;
+}
+
+.c1{display: flex;flex-direction: row; margin: 0rpx 30rpx 6rpx 30rpx;background-color: #ebf5fc;}
+
+.c2{text-align: center;margin-bottom: 20px;margin-top: 50px;font-size: 16px;}
+
+.btn5{width: 47px;height: 30px;font-size: 12px; padding: 1px 0%; 
+       }
+
+.btn6{width: 47px;height: 30px;font-size: 12px; padding: 1px 0%;  
+}
+.y1{display: flex;flex-direction: row;  margin-top:32px;}

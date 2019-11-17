@@ -1,0 +1,53 @@
+/* pages/login/register/register.wxss */.window{
+  color:#4995fa;
+}
+.title text{
+
+font-size: 25px;
+
+color: #666;
+
+}
+.section
+{color:#060707;
+  display: flex;
+  flex-direction: row;
+  margin: 30px;
+  
+}
+.view_a{
+  text-align: center;
+
+}
+.textcolor{
+  color: rgb(238, 230, 230);
+  font-family: "微软雅黑";
+  font-size: 10px;
+  border: 1px #c2ceb89f solid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.color{
+ color: #000000
+ 
+}
+.main{
+  background-image: url(http://5b0988e595225.cdn.sohucs.com/images/20171213/2f29d2a0ccde4b08a19acca383daafc4.jpeg);
+ background-size: 100% 100%;
+ margin: 7%;
+}
+
+.section0
+{color:#060707;
+  display: flex;
+  flex-direction: row;
+  
+  
+}
+
+.css{
+  margin-left:18px;
+}
+
+.c1{margin-left: 16px; letter-spacing: 2px;}
