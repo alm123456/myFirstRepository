@@ -1,0 +1,91 @@
+/* pages/order/order.wxss */
+/*切换栏*/
+.swiper-tab {
+  height: 40px;
+  line-height: 40px;
+  background: #fff;
+  color:#3B3B3B;
+  display: flex;
+  position: relative;
+  z-index: 2;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 20rpx solid #f5f5f5;
+}
+ 
+.swiper-tab-list {
+  margin: 0 4.5%;
+  padding: 0 3%;
+  font-size: 15px;
+}
+ 
+.on {
+  border-bottom:1.5px solid #3eb5fa;
+  color: #3eb5fa;
+}
+ 
+
+ 
+ 
+/*订单列表*/
+.orderDetails {
+  background: #fff;
+  border-bottom: 20rpx solid #f5f5f5;
+ 
+}
+ 
+.orderListTitle {
+  height: 100rpx;
+  line-height: 100rpx;
+  border-bottom: 1rpx solid #BEBEBE;
+}
+ 
+.orderListTitle .userName {
+  padding-right: 50rpx;
+  margin-left:15px;
+}
+ 
+.orderListTitle .orderStatus {
+  float: right;
+  margin-right: 20rpx;
+  color: #2f7b27;
+  font-size: 34rpx;
+}
+ 
+.orderListDetails {
+  display: flex;
+  height: 470rpx;
+  
+}
+ 
+.v2{display: flex; flex-direction: row-reverse; margin-bottom: 9px;}
+.btn1{width: 56px;height: 30px;font-size: 12px; padding: 1px 0%;}
+
+.btn2{width: 56px;height: 30px;font-size: 12px; padding: 1px 0%;  margin-right: 2px;}
+ 
+.orderListDetails .productInfo {
+  flex: 4;
+  margin: 1.5% 10px 0px 5.5%;
+  font-size:15px;
+ 
+}
+ 
+.orderListDetails .productInfo .productTitle {
+  font-size:15px;
+  
+  display: -webkit-box;
+  
+  margin-bottom:10px;
+}
+ 
+.productCount {
+  height: 80rpx;
+  
+ 
+}
+ 
+.productCount>view {
+  float: right;
+  margin-right: 30rpx;
+}

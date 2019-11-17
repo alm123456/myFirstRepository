@@ -1,0 +1,90 @@
+/* pages/personal/pinformation/pchange/pchange.wxss */
+
+.window{
+  color:#4995fa;
+}
+.title text{
+
+font-size: 25px;
+
+color: #666;
+
+}
+ 
+
+/*分割线样式*/
+.modify-form form{
+    display:block;
+    padding:30rpx;
+}
+.label-list {
+    display: flex;
+    width: 100%;
+    height: 80rpx;
+    align-items: center;
+    border-bottom: 1px solid #e8e8e8;
+}
+.place {
+    display: flex;
+    align-items: center;
+    font-size: 36rpx;
+} 
+.label-list .label {
+    color: #333;
+    font-size: 36rpx;
+}
+.label-list input{
+    padding-left: 20rpx;
+    flex: 1;
+    color: #333;
+    font-size: 36rpx;
+}
+.label-list image {
+    height: 80rpx;
+    width: 80rpx;
+}
+.label-lists {
+    justify-content: space-between;
+}
+.btn1{
+  width: 200rpx;
+  height: 200rpx;
+  margin-top: 20rpx;
+  background-color: white;
+  color: #999999;
+  border-radius: 0rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 30rpx;
+  float: right;
+}
+
+.btnImg {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.btn1::after {
+  border: 0; 
+}
+
+ .btn2 {
+       width: 200rpx;
+  height: 200rpx;
+  margin-top: 20rpx;
+  background-color: white;
+  color: #999999;
+  border-radius: 0rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 30rpx;
+  float: left;
+ }
+
+ .btn2::after {
+  border: 0; 
+}

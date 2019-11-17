@@ -1,0 +1,47 @@
+<!--index.wxml-->
+ <!-- 下拉框 -->
+    <view class='select_box'>
+    <view class="t1">
+      <view class='select' catchtap='selectTap'>
+        <text class='select_text'>{{service}}</text>
+      </view>
+     <view class="t2"> <button class="btn" bindtap="goToService">搜索</button></view>
+      </view>
+
+      <view class='option_box' style='height:{{show?(selectData.length>5?250:selectData.length*60):0}}rpx;'>
+        <text class='option' style='{{index==selectData.length-1&&"border:0;"}}' wx:for='{{selectData}}' wx:key='this' data-index='{{index}}' catchtap='optionTap'>{{item}}</text>
+      </view>
+    </view>
+
+ 
+
+<block wx:for='{{text}}'wx:key='ID'>
+
+<view class="v1">
+
+<view class="t1">{{item.title}}</view>
+
+<view class="u1">
+<view>ID:{{item.cardid}}</view>
+
+<view>学科：{{item.subject}}</view>
+<view>薪酬（元/小时）：{{item.money}}</view>
+
+
+<view>上课时间：{{item.time}}</view>
+<view>上课地点：{{item.address}}</view>
+
+
+
+<view>级别：{{item.level}}</view>
+<view>年级：{{item.grade_name}}</view>
+
+
+
+<view>要求：{{item.request}}</view>
+<view class="v2">
+          <view  style="margin-left: 5px;"><button class="btn2"  bindtap="goTocatch" data-value="{{item.cardid}}">接取订单</button></view>
+          </view>
+</view>
+</view>
+</block>
